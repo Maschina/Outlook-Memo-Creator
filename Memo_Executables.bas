@@ -144,6 +144,9 @@ Sub ConvertHTMLIntoMail(Subject As String, CurrentDate As String, Location As St
             CurrentMail.Save
             CurrentMail.BodyFormat = olFormatHTML
             CurrentMail.HTMLBody = MemoHTML & CurrentMail.HTMLBody
+                                    
+            ' Set category to "Memo"
+            CurrentMail.Categories = CurrentMail.Categories & "," & "Memo"
         End If
     End If
 
